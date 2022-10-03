@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+.main {
+  background-color: steelblue;
+  height: 50vh;
+  min-height: 500px;
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.main form {
+  margin: 10px;
+  padding: 20px;
+  border: #fff 3px solid;
+  border-radius: 10px;
+  position: relative;
+  height: 25vh;
+  min-height: 300px;
+}
+
+.main p {
+  position: absolute;
+  bottom: 20px;
+  margin: 10px;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  background-color: steelblue;
+  border-bottom: 3px lightblue solid;
+  margin: 40px 0;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-input {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  color: lightblue;
+  font-size: 20px;
+}
+
+.btn {
+  margin: 10px 0;
+  height: 40px;
+  width: 100%;
+  background-color: lightblue;
+  border: none;
+  border-radius: 10px;
+  color: steelblue;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+
+.form-input input:focus + label span,
+.form-input input:valid + label span{
+  display: inline-block;
+  transform: translateY(-30px);
+}
+
+label span{
+  transition: transform 0.4s ease;
+}
