@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: relative;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  background: url("./ps.jpg") no-repeat;
+  transition: all 0.4s ease;
+  background-size: 75vw 100vh;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  width: 50vw;
+  background: url("./xbox.jpg") no-repeat;
+  background-size: 75vw 100vh;
+
+  transition: all 0.4s ease;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(44, 44, 222, 0.4);
+  transition: all 0.4s ease;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(22, 122, 122, 0.2);
+  transition: all 0.4s ease;
+}
+
+.container div h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.container div .btn {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0px;
+  padding: 10px;
+  height: 5rem;
+  width: 12rem;
+  border: rgb(40, 120, 40) 3px solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container .left .btn {
+  border-color: blue;
+}
+
+.container .left .btn:hover {
+  background-color: rgba(44, 44, 222, 0.3);
+}
+
+.container .right .btn:hover {
+  background-color: rgba(22, 122, 122, 0.4);
+}
+
+.container.show-left .left,
+.container.show-left .left::before {
+  width: 75vw;
+}
+
+.container.show-left .right {
+  width: 25vw;
+  left: 75%;
+}
+
+.container.show-right .left {
+  width: 25vw;
+}
+
+.container.show-right .right {
+  width: 75vw;
+  left: 25%;
+  background-position: left;
+}
+
+@media (max-width: 800px) {
+  .container div h1 {
+    font-size: 1.5rem;
+  }
+
+  .container div .btn {
+    padding: 5px;
+    height: 40px;
+    width: 160px;
+    top:20% 
+  }
+}
