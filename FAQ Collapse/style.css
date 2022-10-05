@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq {
+  background-color: rgba(220, 220, 220, 0.4);
+  padding: 5px 20px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.8s ease;
+}
+
+.faq-question {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.faq-answer {
+  text-align: center;
+  opacity: 0;
+  height: 0;
+  transition: 0.5s linear;
+}
+
+.faq.active {
+  background-color: #fff;
+}
+
+.faq.active .faq-answer {
+  display: block;
+  height: auto;
+  text-align: center;
+  margin: 30px auto;
+  margin-bottom: 40px;
+  font-size: 20px;
+  opacity: 1;
+}
+
+.faq-buttons {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.faq-buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.faq-close {
+  display: none;
+}
+
+.faq-open i {
+  color: blue;
+  font-size: 30px;
+  height: 10px;
+}
+
+.faq.active .faq-open {
+  display: none;
+}
+
+.faq.active .faq-close {
+  background-color: gainsboro;
+  border-radius: 50%;
+  font-size: 15px;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
