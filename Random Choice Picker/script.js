@@ -1,6 +1,7 @@
 const addNewChoiceBtn = document.querySelector(`.add-choice`);
 const choicesElement = document.querySelector(".choices");
 const goBtn = document.querySelector(".spin");
+let isAdded = false;
 
 addNewChoiceBtn.addEventListener("click", () => {
   const newDiv = document.createElement("div");
@@ -11,21 +12,23 @@ addNewChoiceBtn.addEventListener("click", () => {
   newDiv.classList.add("choice");
   choicesElement.appendChild(newDiv);
   newInput.focus();
+  isAdded = true;
 });
 
 goBtn.addEventListener("click", () => {
-  let currentTime = 0;
-  const interval = setInterval(() => {
-    goBtn.setAttribute("disabled", "true")
-    spin(currentTime);
-    currentTime++;
-    if (currentTime > 20) {
-      clearInterval(interval);
-      lastPick();
-    goBtn.removeAttribute("disabled")
-
-    }
-  }, 100);
+  if (isAdded) {
+    let currentTime = 0;
+    const interval = setInterval(() => {
+      goBtn.setAttribute("disabled", "true");
+      spin(currentTime);
+      currentTime++;
+      if (currentTime > 20) {
+        clearInterval(interval);
+        lastPick();
+        goBtn.removeAttribute("disabled");
+      }
+    }, 100);
+  }
 });
 
 function lastPick() {
