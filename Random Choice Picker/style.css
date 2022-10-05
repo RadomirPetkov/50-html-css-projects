@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(120, 180, 180);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.main {
+  min-width: 600px;
+  min-height: 30vh;
+  background-color: rgb(120, 120, 220);
+  border-radius: 10%;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: blue;
+  margin: 20px 0;
+}
+.add-choice span {
+  border-bottom: 2px solid;
+}
+
+.btn.spin {
+  background-color: rgb(59, 160, 59);
+  color: #fff;
+  font-weight: 900;
+}
+.btn.spin:active{
+  transform: scale(0.95);
+}
+
+.btn.spin:disabled{
+  background-color: gainsboro;
+}
+
+.choice {
+  position: relative;
+}
+
+.choice-input {
+  display: block;
+  margin: 20px auto;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.selected {
+  background-color: lightgreen;
+}
+.picked {
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  font-size: 30px;
+  color: lightgreen;
+}
+
+.picker {
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  font-size: 30px;
+}
