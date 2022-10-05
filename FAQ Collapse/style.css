@@ -41,6 +41,7 @@ h1 {
   opacity: 0;
   height: 0;
   transition: 0.5s linear;
+
 }
 
 .faq.active {
@@ -55,6 +56,29 @@ h1 {
   margin-bottom: 40px;
   font-size: 20px;
   opacity: 1;
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 8rem;
+  color: skyblue;
+  opacity: 0.2;
+  
+}
+
+.faq.active::before {
+  transform: rotateY(180deg);
+}
+
+.faq.active::after {
+  right: 10px;
+  left: auto;
+  color: green;
 }
 
 .faq-buttons {
