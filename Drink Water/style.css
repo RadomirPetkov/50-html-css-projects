@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3494e4;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+p {
+  font-size: 20px;
+}
+
+.cup {
+  background-color: #fff;
+  color: #3494e4;
+  height: 400px;
+  width: 300px;
+  border-radius: 0 0 100px 100px;
+  border: #133fc6 3px solid;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+}
+
+.cup.small-cup {
+  height: 150px;
+  width: 100px;
+  border-radius: 0 0 40px 40px;
+  margin: 15px 10px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.cup.small-cup.full {
+  background-color: #6ab3f8;
+  color: #fff;
+}
+
+.remaining {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.liters {
+  font-size: 25px;
+}
+
+.percentage {
+  background-color: #6ab3f8;
+  margin: 0;
+  height: 0;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+}
+
+.goal {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.setGoal {
+  background-color: #0c6ca8;
+  border: 2px solid #fff;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#target {
+  font-size: 20px;
+  height: 30px;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#target::-webkit-outer-spin-button,
+#target::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#target:disabled {
+  background-color: #3494e4;
+  border: none;
+  color: #fff;
+  display: inline-block;
+}
