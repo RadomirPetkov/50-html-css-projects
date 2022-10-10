@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: aliceblue;
+  margin-bottom: 100px;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  background-image: url("https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  z-index: -2;
+  margin-bottom: 30px;
+  overflow-x: hidden;
+
+}
+
+.heading h1 {
+  font-size: 50px;
+  margin: 15px;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.6);
+  z-index: -1;
+}
+
+.content h2,
+.content h3 {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+  font-size: 150%;
+
+}
+
+.content p {
+  color: lightslategray;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+nav {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: All 0.4s ease-in-out;
+  min-width: 500px;
+  overflow: hidden;
+
+}
+
+nav .container {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  height: 80px;
+  transition: All 0.4s ease-in-out;
+
+}
+
+nav .logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  border-bottom: 2px solid white;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  width: 70px;
+  padding: 0 50px;
+
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 50px;
+  transition: All 0.1s ease-in-out;
+
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: burlywood;
+  border-radius: 50%;
+}
+
+nav.active .container,
+nav.active {
+  background-color: #fff;
+  height: 60px;
+
+}
+
+nav.active * {
+  color: crimson;
+}
+
+@media(max-width:700px) {
+
+  nav ul li,
+  nav ul li a {
+    padding: 0 30px;
+  }
+
+  .logo a{
+    font-size: 25px;
+    border-bottom: 1px;
+  }
+}
