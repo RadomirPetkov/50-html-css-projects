@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+body h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.pic {
+  background: url("https://images.unsplash.com/photo-1612532275214-e4ca76d0e4d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
+    no-repeat center center/cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.37),
+    -13px 10px 5px -6px rgba(0, 0, 0, 0.37);
+  height: 540px;
+  width: 400px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 0.2s linear;
+  opacity: 0.3;
+}
+.heart-crack {
+  font-size: 8px;
+}
+
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(50);
+  }
+}
+
+p {
+  margin: 10px;
+  color: #a1a1a1;
+}
+
+.btn {
+  margin-bottom: 50px;
+  border: none;
+  color: steelblue;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+}
