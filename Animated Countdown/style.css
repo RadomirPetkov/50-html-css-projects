@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.counter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 200px;
+  visibility: hidden;
+  background-color: lightblue;
+  border-radius: 50%;
+  padding: 150px;
+  padding-bottom: 250px;
+  
+}
+.counter.show {
+  visibility: visible;
+}
+.counter h3{
+  font-size: 30px;
+  color: #3498db;
+  text-align: center;
+}
+
+.final {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+}
+
+.final.show {
+  visibility: visible;
+}
+
+.nums {
+  position: relative;
+  height: 10px;
+  width: 100px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.nums span {
+  font-size: 60px;
+  top: 50%;
+  left: 70%;
+  position: absolute;
+  text-align: center;
+  transform-origin: bottom center;
+  visibility: hidden;
+  color: #3498db;
+  margin: auto;
+}
+
+.nums span.in {
+  visibility: visible;
+  animation: show 1s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(150%, -50%) rotate(120deg) scale(0);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
+  }
+  60% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-150%, -50%) rotate(-120deg) scale(0);
+  }
+}
+
+.go {
+  font-size: 90px;
+  color: #3498db;
+}
+
+.reset{
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.reset:active{
+  transform: scale(0.98);
+}
+
+@keyframes go {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(3.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
